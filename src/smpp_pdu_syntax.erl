@@ -67,17 +67,15 @@ new_pdu(CmdId, Status, SeqNum, _Body) ->
     {CmdId, Status, SeqNum, []}.
 
 
-pack({CmdId, 0, SeqNum, Body}, PduType) ->
+pack({CmdId, Status, SeqNum, Body}, PduType) ->
     case pack_body(Body, PduType) of
         {ok, BodyL} ->
 		    BodyBin = list_to_binary(BodyL),
             Len = size(BodyBin) + 16,
-            {ok, [<<Len:32, CmdId:32, 0:32, SeqNum:32>>, BodyBin]};
+            {ok, [<<Len:32, CmdId:32, Status:32, SeqNum:32>>, BodyBin]};
         {error, Status} ->
             {error, CmdId, Status, SeqNum}
-    end;
-pack({CmdId, Status, SeqNum, _Body}, _PduType) ->
-    {ok, [<<16:32, CmdId:32, Status:32, SeqNum:32>>]}.
+    end.
 
 
 unpack(<<Len:32, CmdId:32, ?ESME_ROK:32, SeqNum:32, Body/binary>>, PduType)
