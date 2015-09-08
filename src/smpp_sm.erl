@@ -43,6 +43,8 @@
          message_user_data/1,
          originator_port/1,
          pack/2,
+         pack_16bit/1,
+         pack_7bit/1,
          port_addressing_8/3,
          port_addressing_16/3,
          reference_number/1,
