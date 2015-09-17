@@ -1591,6 +1591,34 @@
                     ?USSD_SERVICE_OP_RESERVED,
                     undefined,
                     undefined)).
+%% dialog_id_y
+%%
+%% %@doc This parameter is used to identify the required USSD session.
+%% OpenMind specyfic.  Integer, 4 octet.
+%%
+%% <p>Wireless Network Technology:  GSM (USSD)</p>
+%% %@end
 
+-define(DIALOG_ID_Y,
+        ?SIMPLE_TLV(dialog_id_y,
+                    16#1800,
+                    ?DIALOG_ID_Y_DOMAIN,
+                    ?DIALOG_ID_Y_RESERVED,
+                    undefined,
+                    undefined)).
+%% dialog_id_y
+%%
+%% %@doc This parameter is used to identify the required USSD session.
+%% OpenMind specyfic.  Integer, 8 octet.
+%%
+%% <p>Wireless Network Technology:  GSM (USSD)</p>
+%% %@end
+-define(DIALOG_ID_X,
+        ?SIMPLE_TLV(dialog_id_x,
+                    16#1801,
+                    ?DIALOG_ID_X_DOMAIN,
+                    ?DIALOG_ID_X_RESERVED,
+                    undefined,
+                    undefined)).
 -endif.  % -ifndef(smpp_param)
 

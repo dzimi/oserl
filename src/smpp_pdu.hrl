@@ -189,7 +189,10 @@
               ?SOURCE_TELEMATICS_ID,
               ?USER_MESSAGE_REFERENCE,
               ?USER_RESPONSE_CODE,        % (CDMA, TDMA)
-              ?USSD_SERVICE_OP])).
+              ?USSD_SERVICE_OP,
+              ?DIALOG_ID_X,
+              ?DIALOG_ID_Y
+             ])).
 
 -define(SUBMIT_SM_RESP,
         ?PDU([?MESSAGE_ID],
@@ -198,7 +201,9 @@
               ?CONGESTION_STATE,
               ?DELIVERY_FAILURE_REASON,   % data_sm_resp only
               ?DPF_RESULT,
-              ?NETWORK_ERROR_CODE])).
+              ?NETWORK_ERROR_CODE,
+              ?DIALOG_ID_X,
+              ?DIALOG_ID_Y])).
 
 -define(DATA_SM,
         ?PDU([?SERVICE_TYPE,
@@ -430,7 +435,9 @@
               ?SOURCE_SUBADDRESS,         % (CDMA, TDMA)
               ?USER_MESSAGE_REFERENCE,
               ?USER_RESPONSE_CODE,        % (CDMA, TDMA)
-              ?USSD_SERVICE_OP])).
+              ?USSD_SERVICE_OP,
+              ?DIALOG_ID_X,
+              ?DIALOG_ID_Y])).
 
 -define(DELIVER_SM_RESP,
         ?PDU([?MESSAGE_ID],
@@ -438,7 +445,9 @@
              [?ADDITIONAL_STATUS_INFO_TEXT,
               ?CONGESTION_STATE,
               ?DELIVERY_FAILURE_REASON,
-              ?NETWORK_ERROR_CODE])).
+              ?NETWORK_ERROR_CODE,
+              ?DIALOG_ID_X,
+              ?DIALOG_ID_Y])).
 
 -define(BROADCAST_SM,
         ?PDU([?SERVICE_TYPE,
