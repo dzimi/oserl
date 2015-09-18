@@ -202,6 +202,7 @@
               ?DELIVERY_FAILURE_REASON,   % data_sm_resp only
               ?DPF_RESULT,
               ?NETWORK_ERROR_CODE,
+              ?USSD_SERVICE_OP,
               ?DIALOG_ID_X,
               ?DIALOG_ID_Y])).
 
