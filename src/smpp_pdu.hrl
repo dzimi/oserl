@@ -448,6 +448,7 @@
               ?CONGESTION_STATE,
               ?DELIVERY_FAILURE_REASON,
               ?NETWORK_ERROR_CODE,
+              ?USSD_SERVICE_OP,
               ?DIALOG_ID_X,
               ?DIALOG_ID_Y])).
 
