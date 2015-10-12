@@ -1005,12 +1005,12 @@
         ?UNION([?RANGE_INTEGER(1,  4,  15),
                 ?RANGE_INTEGER(1, 20,  31)])).
 
--define(DIALOG_ID_Y_DATATYPE, ?INTEGER(4)).
--define(DIALOG_ID_Y_DOMAIN, ?INTEGER(4)).
+-define(DIALOG_ID_Y_DATATYPE, ?INTEGER(10)).
+-define(DIALOG_ID_Y_DOMAIN, ?INTEGER(10)).
 -define(DIALOG_ID_Y_RESERVED,    ?EMPTY).
 
--define(DIALOG_ID_X_DATATYPE, ?INTEGER(8)).
--define(DIALOG_ID_X_DOMAIN, ?INTEGER(8)).
+-define(DIALOG_ID_X_DATATYPE, ?INTEGER(10)).
+-define(DIALOG_ID_X_DOMAIN, ?INTEGER(10)).
 -define(DIALOG_ID_X_RESERVED,    ?EMPTY).
 
 %%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
